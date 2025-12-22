@@ -12,9 +12,16 @@ function index(req, res) {
 
 //SHOW
 function show(req, res) {
+
     const id = parseInt(req.params.id);
+
     const post = posts.find((post) => post.id === id)
-    res.json(post)
+    if (post === undefined) {
+        res.send("post non trovato chiedi a Batman !!!")
+    } else {
+        res.json(post)
+    }
+
 }
 
 
