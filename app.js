@@ -11,8 +11,12 @@ const port = 3000;
 //per rendere la cartella public publica (mano sui capelli...)
 //url per le immagini: localhost:3000/images/ciambellone.jpeg ----> restituisce l'immagine !!!!!!!
 app.use(express.static("public"));
-
+app.use(express.json());
 app.use("/posts", postsRouter)
+
+
+
+
 
 
 //ascolto del server (ma c'è davvero bisogno di spiegare tutto ? )

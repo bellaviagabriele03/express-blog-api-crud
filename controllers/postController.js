@@ -29,7 +29,21 @@ function show(req, res) {
 
 //STORE
 function store(req, res) {
-    res.send("creato nuovo post")
+    const datas = req.body;
+    console.log(datas);
+
+    const newID = posts[posts.length - 1].id + 1;
+
+    const newPost = {
+        id: newID,
+        title: datas.title,
+        content: datas.content,
+        tags: datas.tags
+    }
+    posts.push(newPost);
+    //status 201 "indica nuovo elemento creato"
+    res.status(201)
+    res.json(newPost)
 }
 
 //UPDATE
