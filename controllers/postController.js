@@ -17,7 +17,9 @@ function show(req, res) {
 
     const post = posts.find((post) => post.id === id)
     if (post === undefined) {
+        res.status(404)
         res.send("post non trovato chiedi a Batman !!!")
+
     } else {
         res.json(post)
     }
