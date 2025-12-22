@@ -1,0 +1,16 @@
+{
+  "name": "express-blog-intro",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Gabriele",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
