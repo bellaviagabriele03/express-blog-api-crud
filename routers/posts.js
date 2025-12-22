@@ -15,21 +15,14 @@ rounter.post("/", controller.store)
 
 
 //UPDATE
-rounter.put("/:id", (req, res) => {
-    const id = parseInt(req.params.id)
-    res.send("modificato il post con id:" + id)
-})
+rounter.put("/:id", controller.update)
 
 //MODIFY
-rounter.patch("/:id", (req, res) => {
-    const id = parseInt(req.params.id)
-    res.send("modica parziale del post con id:" + id)
-})
+rounter.patch("/:id", controller.modify)
+
+
 //DESTROY 
-rounter.delete("/:id", (req, res) => {
-    const id = parseInt(req.params.id)
-    res.send("hai eliminato il post con id:" + id)
-})
+rounter.delete("/:id", controller.destroy)
 
 
 

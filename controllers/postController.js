@@ -19,21 +19,38 @@ function show(req, res) {
 
 
 //STORE
-function store (req, res) {
-     res.send("creato nuovo post")
+function store(req, res) {
+    res.send("creato nuovo post")
 }
 
 //UPDATE
+function update(req, res) {
+    const id = parseInt(req.params.id)
+    res.send("modificato il post con id:" + id)
+}
+
 
 //MODIFY
+function modify(req, res) {
+    const id = parseInt(req.params.id)
+    res.send("modica parziale del post con id:" + id)
+}
 
 //DESTROY 
+function destroy(req, res) {
+    const id = parseInt(req.params.id)
+    res.send("hai eliminato il post con id:" + id)
+}
+
 
 
 const controller = {
     index,
     show,
     store,
+    update,
+    modify,
+    destroy,
 }
 
 export default controller;
