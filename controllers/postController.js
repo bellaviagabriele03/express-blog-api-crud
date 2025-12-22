@@ -1,4 +1,4 @@
-import posts from "../data/data";
+import posts from "../data/data.js";
 
 //INDEX
 function index(req, res) {
