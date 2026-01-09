@@ -6,7 +6,7 @@ const rounter = express.Router();
 
 
 //INDEX 
-rounter.get("/", controller.index)
+ rounter.get("/", controller.index)
 
 //SHOW 
 rounter.get("/:id", controller.show)

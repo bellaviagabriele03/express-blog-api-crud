@@ -4,6 +4,7 @@ console.log("Hello Boolean !!");
 import express from "express";
 import postsRouter from "./routers/posts.js"
 import notfound from "./middlewares/notfound.js";
+import errorhandler from "./middlewares/errorhandler.js";
 
 //express senza sicilia (questo mi fa male...)
 const app = express();
@@ -17,7 +18,7 @@ app.use("/posts", postsRouter)
 
 
 
-
+app.use(errorhandler)
 app.use(notfound)
 
 //ascolto del server (ma c'è davvero bisogno di spiegare tutto ? )
