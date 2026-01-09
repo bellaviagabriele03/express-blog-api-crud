@@ -23,7 +23,6 @@ function show(req, res) {
     } else {
         res.json(post)
     }
-
 }
 
 

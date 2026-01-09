@@ -1,5 +1,6 @@
 
 import controller from "../controllers/postController.js";
+import express from "express";
 
 const rounter = express.Router();
 
